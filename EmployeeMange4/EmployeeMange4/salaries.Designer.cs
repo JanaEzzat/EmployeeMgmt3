@@ -203,9 +203,9 @@
             this.label5.ForeColor = System.Drawing.Color.Teal;
             this.label5.Location = new System.Drawing.Point(12, 247);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 20);
+            this.label5.Size = new System.Drawing.Size(106, 20);
             this.label5.TabIndex = 24;
-            this.label5.Text = "Employee Gender";
+            this.label5.Text = "Days Attendd";
             // 
             // panel1
             // 
