@@ -105,9 +105,9 @@
             this.label3.ForeColor = System.Drawing.Color.Teal;
             this.label3.Location = new System.Drawing.Point(252, 109);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 22);
+            this.label3.Size = new System.Drawing.Size(84, 22);
             this.label3.TabIndex = 5;
-            this.label3.Text = "label3";
+            this.label3.Text = "User name";
             // 
             // login
             // 
