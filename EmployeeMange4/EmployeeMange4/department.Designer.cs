@@ -31,17 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(department));
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.gunaDateTimePicker2 = new Guna.UI.WinForms.GunaDateTimePicker();
-            this.gunaDateTimePicker1 = new Guna.UI.WinForms.GunaDateTimePicker();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,6 +39,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,128 +48,24 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Teal;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(139, 486);
+            this.button2.Location = new System.Drawing.Point(147, 203);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 33);
+            this.button2.Size = new System.Drawing.Size(92, 36);
             this.button2.TabIndex = 43;
             this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Teal;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(15, 486);
+            this.button1.Location = new System.Drawing.Point(37, 203);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 38);
+            this.button1.Size = new System.Drawing.Size(92, 36);
             this.button1.TabIndex = 42;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // gunaDateTimePicker2
-            // 
-            this.gunaDateTimePicker2.BackColor = System.Drawing.Color.Green;
-            this.gunaDateTimePicker2.BaseColor = System.Drawing.Color.Teal;
-            this.gunaDateTimePicker2.BorderColor = System.Drawing.Color.Silver;
-            this.gunaDateTimePicker2.CustomFormat = null;
-            this.gunaDateTimePicker2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.gunaDateTimePicker2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaDateTimePicker2.ForeColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker2.Location = new System.Drawing.Point(7, 387);
-            this.gunaDateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.gunaDateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.gunaDateTimePicker2.Name = "gunaDateTimePicker2";
-            this.gunaDateTimePicker2.OnHoverBaseColor = System.Drawing.Color.White;
-            this.gunaDateTimePicker2.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDateTimePicker2.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDateTimePicker2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker2.Size = new System.Drawing.Size(223, 30);
-            this.gunaDateTimePicker2.TabIndex = 41;
-            this.gunaDateTimePicker2.Text = "Wednesday, January 25, 2023";
-            this.gunaDateTimePicker2.Value = new System.DateTime(2023, 1, 25, 20, 26, 3, 870);
-            // 
-            // gunaDateTimePicker1
-            // 
-            this.gunaDateTimePicker1.BackColor = System.Drawing.Color.Teal;
-            this.gunaDateTimePicker1.BaseColor = System.Drawing.Color.Teal;
-            this.gunaDateTimePicker1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaDateTimePicker1.CustomFormat = null;
-            this.gunaDateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.gunaDateTimePicker1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaDateTimePicker1.ForeColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker1.Location = new System.Drawing.Point(7, 337);
-            this.gunaDateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.gunaDateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.gunaDateTimePicker1.Name = "gunaDateTimePicker1";
-            this.gunaDateTimePicker1.OnHoverBaseColor = System.Drawing.Color.White;
-            this.gunaDateTimePicker1.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDateTimePicker1.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDateTimePicker1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker1.Size = new System.Drawing.Size(223, 24);
-            this.gunaDateTimePicker1.TabIndex = 40;
-            this.gunaDateTimePicker1.Text = "Wednesday, January 25, 2023";
-            this.gunaDateTimePicker1.Value = new System.DateTime(2023, 1, 25, 20, 26, 3, 870);
-            this.gunaDateTimePicker1.ValueChanged += new System.EventHandler(this.gunaDateTimePicker1_ValueChanged);
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(21, 445);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(227, 26);
-            this.textBox6.TabIndex = 38;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Teal;
-            this.label9.Location = new System.Drawing.Point(18, 422);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(169, 20);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "Employee  Daily Salary";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Teal;
-            this.label8.Location = new System.Drawing.Point(25, 364);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 20);
-            this.label8.TabIndex = 36;
-            this.label8.Text = "join Date";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Teal;
-            this.label7.Location = new System.Drawing.Point(18, 314);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 20);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "Date of birth";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(20, 280);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(175, 28);
-            this.comboBox2.TabIndex = 51;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(22, 226);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(173, 28);
-            this.comboBox1.TabIndex = 50;
             // 
             // pictureBox1
             // 
@@ -190,30 +77,9 @@
             this.pictureBox1.TabIndex = 49;
             this.pictureBox1.TabStop = false;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Teal;
-            this.label6.Location = new System.Drawing.Point(18, 257);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(165, 20);
-            this.label6.TabIndex = 48;
-            this.label6.Text = "Employee department";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Teal;
-            this.label5.Location = new System.Drawing.Point(12, 200);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 20);
-            this.label5.TabIndex = 47;
-            this.label5.Text = "Employee Gender";
-            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(28, 171);
+            this.textBox1.Location = new System.Drawing.Point(22, 171);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(227, 26);
             this.textBox1.TabIndex = 46;
@@ -281,30 +147,31 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Teal;
+            this.label5.Location = new System.Drawing.Point(391, 268);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(117, 20);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "Department list";
+            // 
             // department
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(921, 557);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.gunaDateTimePicker2);
-            this.Controls.Add(this.gunaDateTimePicker1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -322,17 +189,7 @@
         #endregion
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private Guna.UI.WinForms.GunaDateTimePicker gunaDateTimePicker2;
-        private Guna.UI.WinForms.GunaDateTimePicker gunaDateTimePicker1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -340,5 +197,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
     }
 }
