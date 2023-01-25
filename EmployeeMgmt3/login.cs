@@ -21,5 +21,10 @@ namespace EmployeeMgmt3
         {
 
         }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
