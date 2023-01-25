@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,7 +45,10 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -109,22 +112,15 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Employee name";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(25, 258);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(227, 26);
-            this.textBox2.TabIndex = 7;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Teal;
             this.label5.Location = new System.Drawing.Point(22, 235);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 20);
+            this.label5.Size = new System.Drawing.Size(137, 20);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Employee name";
+            this.label5.Text = "Employee Gender";
             // 
             // textBox3
             // 
@@ -139,9 +135,9 @@
             this.label6.ForeColor = System.Drawing.Color.Teal;
             this.label6.Location = new System.Drawing.Point(22, 296);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 20);
+            this.label6.Size = new System.Drawing.Size(165, 20);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Employee name";
+            this.label6.Text = "Employee department";
             // 
             // textBox4
             // 
@@ -156,9 +152,9 @@
             this.label7.ForeColor = System.Drawing.Color.Teal;
             this.label7.Location = new System.Drawing.Point(22, 357);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 20);
+            this.label7.Size = new System.Drawing.Size(97, 20);
             this.label7.TabIndex = 10;
-            this.label7.Text = "Employee name";
+            this.label7.Text = "Date of birth";
             // 
             // textBox5
             // 
@@ -173,9 +169,9 @@
             this.label8.ForeColor = System.Drawing.Color.Teal;
             this.label8.Location = new System.Drawing.Point(22, 422);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 20);
+            this.label8.Size = new System.Drawing.Size(72, 20);
             this.label8.TabIndex = 12;
-            this.label8.Text = "Employee name";
+            this.label8.Text = "join Date";
             // 
             // textBox6
             // 
@@ -190,9 +186,9 @@
             this.label9.ForeColor = System.Drawing.Color.Teal;
             this.label9.Location = new System.Drawing.Point(22, 486);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(123, 20);
+            this.label9.Size = new System.Drawing.Size(169, 20);
             this.label9.TabIndex = 14;
-            this.label9.Text = "Employee name";
+            this.label9.Text = "Employee  Daily Salary";
             // 
             // panel2
             // 
@@ -203,12 +199,32 @@
             this.panel2.Size = new System.Drawing.Size(1200, 26);
             this.panel2.TabIndex = 16;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(45, 103);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(26, 258);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.TabIndex = 18;
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label9);
@@ -218,7 +234,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
@@ -231,6 +246,7 @@
             this.Text = "Employee";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,7 +260,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
@@ -255,5 +270,7 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
