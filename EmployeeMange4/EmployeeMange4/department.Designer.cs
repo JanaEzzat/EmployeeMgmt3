@@ -224,9 +224,9 @@
             this.label4.ForeColor = System.Drawing.Color.Teal;
             this.label4.Location = new System.Drawing.Point(25, 148);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 20);
+            this.label4.Size = new System.Drawing.Size(138, 20);
             this.label4.TabIndex = 45;
-            this.label4.Text = "Employee name";
+            this.label4.Text = "Department name";
             // 
             // label3
             // 
