@@ -104,6 +104,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Teal;
             this.label4.Location = new System.Drawing.Point(282, 222);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 24);
