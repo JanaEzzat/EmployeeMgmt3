@@ -104,7 +104,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(453, 177);
+            this.label3.Location = new System.Drawing.Point(438, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 20);
             this.label3.TabIndex = 2;
@@ -336,11 +336,11 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.Teal;
-            this.label12.Location = new System.Drawing.Point(539, 103);
+            this.label12.Location = new System.Drawing.Point(539, 113);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 20);
+            this.label12.Size = new System.Drawing.Size(91, 20);
             this.label12.TabIndex = 66;
-            this.label12.Text = "Employee";
+            this.label12.Text = "department";
             // 
             // label13
             // 

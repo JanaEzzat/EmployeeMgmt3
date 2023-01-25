@@ -206,11 +206,12 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Teal;
-            this.label7.Location = new System.Drawing.Point(493, 83);
+            this.label7.Location = new System.Drawing.Point(493, 93);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 20);
+            this.label7.Size = new System.Drawing.Size(91, 20);
             this.label7.TabIndex = 58;
-            this.label7.Text = "Employee";
+            this.label7.Text = "department";
+            this.label7.Click += new System.EventHandler(this.label7_Click_1);
             // 
             // label8
             // 
