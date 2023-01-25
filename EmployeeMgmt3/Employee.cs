@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace EmployeeMgmt3
 {
-    public partial class Employee : UserControl
+    public partial class EmployeeMgmt3 : UserControl
     {
-        public Employee()
+        public EmployeeMgmt3()
         {
             InitializeComponent();
+        }
+
+        private void Employee_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
