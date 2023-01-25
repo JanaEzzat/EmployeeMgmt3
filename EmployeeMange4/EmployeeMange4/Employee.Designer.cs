@@ -60,11 +60,11 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Teal;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(423, 39);
+            this.label2.Location = new System.Drawing.Point(364, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.Size = new System.Drawing.Size(239, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.label2.Text = "Employee Mangment Versign 10";
             // 
             // Employee
             // 
