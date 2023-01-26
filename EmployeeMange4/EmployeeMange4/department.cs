@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -67,6 +68,14 @@ namespace EmployeeMange4
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             DepNameTb.Text = DepList.SelectedRows[0].cells[1].value.ToString();
+            if (DepNameTb.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key=Convert.ToInt32(DepList.SelectedRows[0].cells[1].value.ToString())
+            }
 
         }
            
