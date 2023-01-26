@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmployeeMange4
+namespace EmployeeMange3
+
 {
     class Functions {
         private SqlConnection Con;
