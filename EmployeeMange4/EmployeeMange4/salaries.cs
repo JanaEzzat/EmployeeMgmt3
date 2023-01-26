@@ -53,7 +53,10 @@ namespace EmployeeMange4
                 ShowDepartments();
                 MessageBox.Show("Department Deleted!!!");
                 DepNameTb.Text = "";
-            }
+                Functions Con;
+                public Departments()
+                {
+                }
         }
     }
     }
