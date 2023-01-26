@@ -55,7 +55,11 @@ namespace EmployeeMange4
                 DepNameTb.Text = "";
                 Functions Con;
                 public Departments()
-                {
+                    InitializeComponent();
+                Con = new Functions();
+                ShowDepartments();
+            }
+            {
                 }
         }
     }
