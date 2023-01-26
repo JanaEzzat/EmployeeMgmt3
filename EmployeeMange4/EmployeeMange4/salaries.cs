@@ -60,7 +60,17 @@ namespace EmployeeMange4
                 ShowDepartments();
                 string Query = "Select * from DepartmentTb1";
                 DepList.DataSource = Con.GetData(Query);
-            }
+                private void AddBtn_Click(object sender, EventArgs e)
+                {
+                    try
+                    {
+                        if (DepNameTb.Text == "")
+                        {
+                            MessageBox.Show("missing data!!!");
+                        }
+                        else
+                        {
+                        }
         }
             {
                 }
