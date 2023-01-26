@@ -346,7 +346,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Teal;
+            this.button3.BackColor = System.Drawing.Color.Red;
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(384, 454);
             this.button3.Name = "button3";
