@@ -103,7 +103,16 @@ namespace EmployeeMange4
                         try
                         {
                         }
-            {
+                               string Dep = DepNameTb.Text;
+                        string Query = "Delete from DepartmentTb1 where Depid = {0}";
+                        Query = string.Format(Query, key);
+                        Con.SetData(Query);
+                        ShowDepartments();
+                        MessageBox.Show("Department Deleted!!!");
+                        DepNameTb.Text = "";
+                    }
+                }
+                {
                 }
         }
     }
