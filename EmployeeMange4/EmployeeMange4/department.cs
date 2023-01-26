@@ -43,6 +43,8 @@ namespace EmployeeMange4
                 {
                     string Dep = DepNameTb.Text;
                     string Query = "insert into DepartmentTbl values({0})";
+                    Query = string.Format(DepNameTb.Text);
+
                 }
 
             }
