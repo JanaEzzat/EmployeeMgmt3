@@ -16,7 +16,11 @@ namespace EmployeeMange4
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Employee());
+            Application.Run(new Departments());
         }
+    }
+
+    internal class Departments : Form
+    {
     }
 }

@@ -43,16 +43,22 @@ namespace EmployeeMange4
                 {
                     string Dep = DepNameTb.Text;
                     string Query = "insert into DepartmentTbl values({0})";
-                    Query = string.Format(DepNameTb.Text);
+                    Query = string.Format( Query.DepNameTb.Text);
+                    Con.SetData(Query);
+                    ShowDepartments();
+                    MessageBox.Show("Department Added!!!");
+                    DepNameTb.Text="";
+
+
 
                 }
 
             }
             
-                Catch(Exception EX){
-                    MessageBox.Show(Ex.Message);
-
+                catch(Exception EX){
+                MessageBox.Show(EX.Message);
                 }
+
             
            
         }
