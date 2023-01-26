@@ -62,6 +62,7 @@ namespace EmployeeMange4
             
            
         }
+        int key = 0;
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
