@@ -72,6 +72,29 @@ namespace EmployeeMange4
             MessageBox.Show("Department Deleted!!!");
             DepNameTb.Text = "";
         }
+
+        private void Employee_Load(object sender, EventArgs e)
+        {
+
+            InitializeComponent();
+            Con = new Functions();
+            ShowDepartments();
+        }
+        private void ShowDepartments()
+        {
+            string Query = "Select * from DepartmentTb1";
+            DepList.DataSource = Con.GetData(Query);
+        }
+        InitializeComponent();
+        Con = new Functions();
+        ShowDepartments();
+    }
+    private void ShowDepartments()
+    {
+        string Query = "Select * from DepartmentTb1";
+        DepList.DataSource = Con.GetData(Query);
+    }
+}
     }
 }
     }
