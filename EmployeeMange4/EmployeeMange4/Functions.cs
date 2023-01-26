@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmployeeMange3
+ namespace EmployeeMange4 
 
 {
     class Functions {
@@ -36,7 +36,7 @@ namespace EmployeeMange3
             int cnt = 0;
             if(Con.State == ConnectionState.Closed)
             {
-              
+                Con.Open();
 
             }
             Cmd.CommandText = Query;
@@ -49,4 +49,4 @@ namespace EmployeeMange3
    
 
     }
-}
+
