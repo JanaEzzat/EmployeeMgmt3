@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,14 +13,44 @@ namespace EmployeeMange4
 {
     public partial class department : Form
     {
+        Functions Con;
+
+        public object DepList { get; private set; }
+
         public department()
         {
             InitializeComponent();
+            Con = new Functions();
+            ListerDepartments();
         }
+        private void ListerDepartments()
+        {
+            string Query = "Select= form DepartmentTbl";
+            DepList.DataSource = Con.GetData(Query);
 
+
+
+        }
         private void label6_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (DepNameTb.Text == "")
+                {
+                    MessageBox.Show("Missing Data!!!");
+                }
+                else
+                {
 
+                }
+
+            }
+            
+                Catch(Exception EX){
+                    MessageBox.Show(Ex.Message);
+                }
+            
+           
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
