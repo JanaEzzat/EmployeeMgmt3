@@ -321,6 +321,7 @@
             this.label13.Size = new System.Drawing.Size(79, 20);
             this.label13.TabIndex = 73;
             this.label13.Text = "Employee";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // pictureBox3
             // 
