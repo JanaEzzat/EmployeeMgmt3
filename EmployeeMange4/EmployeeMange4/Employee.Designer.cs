@@ -137,6 +137,7 @@
             this.label5.Size = new System.Drawing.Size(137, 20);
             this.label5.TabIndex = 6;
             this.label5.Text = "Employee Gender";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 

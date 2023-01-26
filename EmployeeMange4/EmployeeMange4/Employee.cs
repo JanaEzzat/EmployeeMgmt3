@@ -61,5 +61,18 @@ namespace EmployeeMange4
                 MessageBox.Show(Ex.Message);
             }
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            string Dep = DepNameTb.Text;
+            string Query = "Delete from DepartmentTb1 where Depid = {0}";
+            Query = string.Format(Query, key);
+            Con.SetData(Query);
+            ShowDepartments();
+            MessageBox.Show("Department Deleted!!!");
+            DepNameTb.Text = "";
+        }
+    }
+}
     }
 }
