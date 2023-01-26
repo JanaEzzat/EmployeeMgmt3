@@ -66,8 +66,10 @@ namespace EmployeeMange4
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            DepNameTb.Text = DepList.SelectedRows[0].cells[1].value.ToString();
 
         }
+           
 
         private void gunaDateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
