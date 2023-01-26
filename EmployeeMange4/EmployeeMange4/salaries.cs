@@ -36,6 +36,8 @@ namespace EmployeeMange4
         {
             Employees Obj = new Employees();
             Obj.Show();
+            this.Hide();
+
 
 
         }

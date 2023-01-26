@@ -1,6 +1,6 @@
-﻿namespace EmployeeMange4
+﻿namespace EmployeeMgmt1
 {
-    partial class department
+    partial class Departments
     {
         /// <summary>
         /// Required designer variable.

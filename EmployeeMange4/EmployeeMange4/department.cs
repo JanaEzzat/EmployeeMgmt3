@@ -1,24 +1,20 @@
-﻿using System;
+﻿using EmployeeMange4;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EmployeeMange4
+namespace EmployeeMgmt1
 {
-    public partial class department : Form
+    public partial class Departments : Form
     {
         Functions Con;
-
-        public object DepList { get; private set; }
-
-        public department()
+        public Departments()
         {
             InitializeComponent();
             Con = new Functions();
@@ -26,120 +22,103 @@ namespace EmployeeMange4
         }
         private void ShowDepartments()
         {
-            string Query = "Select= form DepartmentTbl";
+            string Query = "Select * from DepartmentTb1";
             DepList.DataSource = Con.GetData(Query);
-
-
-
         }
-        private void label6_Click(object sender, EventArgs e)
+
+        private void AddBtn_Click(object sender, EventArgs e)
         {
             try
             {
                 if (DepNameTb.Text == "")
                 {
-                    MessageBox.Show("Missing Data!!!");
+                    MessageBox.Show("missing data!!!");
                 }
                 else
                 {
                     string Dep = DepNameTb.Text;
-                    string Query = "Update DepartmentTbl  set DepName ={0} where DepId ={1}";
-                    Query = string.Format( Query.DepNameTb.Text,key);
+                    string Query = "insert into DepartmentTb1 values('{0}')";
+                    Query = string.Format(Query, DepNameTb.Text);
                     Con.SetData(Query);
                     ShowDepartments();
-                    MessageBox.Show("Department updated!!!");
-                    DepNameTb.Text="";
-
-
-
+                    MessageBox.Show("Department Added!!!");
+                    DepNameTb.Text = "";
                 }
-
             }
-            
-                catch(Exception EX){
-                MessageBox.Show(EX.Message);
-                }
-
-            
-           
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
         }
         int key = 0;
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void DepList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DepNameTb.Text = DepList.SelectedRows[0].cells[1].value.ToString();
+            DepNameTb.Text = DepList.SelectedRows[0].Cells[0].Value.ToString();
             if (DepNameTb.Text == "")
             {
                 key = 0;
             }
             else
             {
-                key=Convert.ToInt32(DepList.SelectedRows[0].cells[0].value.ToString())
+                key = Convert.ToInt32(DepList.SelectedRows[0].Cells[0].Value.ToString());
             }
-
         }
-           
 
-        private void gunaDateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void EditBtn_Click(object sender, EventArgs e)
         {
             try
             {
                 if (DepNameTb.Text == "")
                 {
-                    MessageBox.Show("Missing Data!!!");
+                    MessageBox.Show("missing data!!!");
                 }
                 else
                 {
                     string Dep = DepNameTb.Text;
-                    string Query = "insert into DepartmentTbl values({0})";
-                    Query = string.Format(Query.DepNameTb.Text);
+                    string Query = "Update DepartmentTb1 set Depname = '{0}' where Depid = {1}";
+                    Query = string.Format(Query, DepNameTb.Text, key);
                     Con.SetData(Query);
                     ShowDepartments();
-                    MessageBox.Show("Department Added!!!");
+                    MessageBox.Show("Department Updated!!!");
                     DepNameTb.Text = "";
-
-
-
                 }
-
             }
-
-            catch (Exception EX)
+            catch (Exception Ex)
             {
-                MessageBox.Show(EX.Message);
-    
+                MessageBox.Show(Ex.Message);
+            }
+        }
 
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DepNameTb.Text == "")
+                {
+                    MessageBox.Show("missing data!!!");
+                }
+                else
+                {
+                    string Dep = DepNameTb.Text;
+                    string Query = "Delete from DepartmentTb1 where Depid = {0}";
+                    Query = string.Format(Query, key);
+                    Con.SetData(Query);
+                    ShowDepartments();
+                    MessageBox.Show("Department Deleted!!!");
+                    DepNameTb.Text = "";
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
+
+        private void EmpLbl_Click(object sender, EventArgs e)
+        {
+            Employees obj = new Employees();
+            obj.Show();
+            this.Hide();
         }
     }
-        privait void DeleteBtn_ Click(object sender,EventArgs e)
-        {
-            try
-            {
-                if (DepNameTb.Text == "")
-                {
-                    MessageBox.Show("Missing Data!!!");
-                }
-                else
-                {
-                    string Dep = DepNameTb.Text;
-                    string Query = "Delete formDepartmentTbl where Depid({0})";
-                    Query = string.Format(Query.DepNameTb.Text);
-                    Con.SetData(Query);
-                    ShowDepartments();
-                    MessageBox.Show("Department Added!!!");
-                    DepNameTb.Text = "";
-
-
-
-                }
-
-            }
-
-            catch (Exception EX)
-            {
-                MessageBox.Show(EX.Message);
-
-
-            }
-        }
 }
