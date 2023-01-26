@@ -41,13 +41,14 @@ namespace EmployeeMange4
                 }
                 else
                 {
-
+                    string Dep = DepNameTb.Text;
                 }
 
             }
             
                 Catch(Exception EX){
                     MessageBox.Show(Ex.Message);
+
                 }
             
            
