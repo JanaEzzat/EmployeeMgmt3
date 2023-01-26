@@ -111,4 +111,35 @@ namespace EmployeeMange4
 
         }
     }
+        privait void DeleteBtn_ Click(object sender,EventArgs e)
+        {
+            try
+            {
+                if (DepNameTb.Text == "")
+                {
+                    MessageBox.Show("Missing Data!!!");
+                }
+                else
+                {
+                    string Dep = DepNameTb.Text;
+                    string Query = "Delete formDepartmentTbl where Depid({0})";
+                    Query = string.Format(Query.DepNameTb.Text);
+                    Con.SetData(Query);
+                    ShowDepartments();
+                    MessageBox.Show("Department Added!!!");
+                    DepNameTb.Text = "";
+
+
+
+                }
+
+            }
+
+            catch (Exception EX)
+            {
+                MessageBox.Show(EX.Message);
+
+
+            }
+        }
 }
