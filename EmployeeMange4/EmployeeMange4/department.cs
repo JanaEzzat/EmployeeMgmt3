@@ -43,11 +43,11 @@ namespace EmployeeMange4
                 else
                 {
                     string Dep = DepNameTb.Text;
-                    string Query = "insert into DepartmentTbl values({0})";
-                    Query = string.Format( Query.DepNameTb.Text);
+                    string Query = "Update DepartmentTbl  set DepName ={0} where DepId ={1}";
+                    Query = string.Format( Query.DepNameTb.Text,key);
                     Con.SetData(Query);
                     ShowDepartments();
-                    MessageBox.Show("Department Added!!!");
+                    MessageBox.Show("Department updated!!!");
                     DepNameTb.Text="";
 
 
@@ -107,45 +107,7 @@ namespace EmployeeMange4
             catch (Exception EX)
             {
                 MessageBox.Show(EX.Message);
-            }
-
-
-
-        }
-    }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void department_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click_1(object sender, EventArgs e)
-        {
+    
 
         }
     }
