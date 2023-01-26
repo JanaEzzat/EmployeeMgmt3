@@ -82,8 +82,37 @@ namespace EmployeeMange4
 
         private void gunaDateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
+            try
+            {
+                if (DepNameTb.Text == "")
+                {
+                    MessageBox.Show("Missing Data!!!");
+                }
+                else
+                {
+                    string Dep = DepNameTb.Text;
+                    string Query = "insert into DepartmentTbl values({0})";
+                    Query = string.Format(Query.DepNameTb.Text);
+                    Con.SetData(Query);
+                    ShowDepartments();
+                    MessageBox.Show("Department Added!!!");
+                    DepNameTb.Text = "";
+
+
+
+                }
+
+            }
+
+            catch (Exception EX)
+            {
+                MessageBox.Show(EX.Message);
+            }
+
+
 
         }
+    }
 
         private void label7_Click(object sender, EventArgs e)
         {
