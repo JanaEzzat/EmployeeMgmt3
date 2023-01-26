@@ -58,7 +58,10 @@ namespace EmployeeMange4
                     InitializeComponent();
                 Con = new Functions();
                 ShowDepartments();
+                string Query = "Select * from DepartmentTb1";
+                DepList.DataSource = Con.GetData(Query);
             }
+        }
             {
                 }
         }
