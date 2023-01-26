@@ -48,6 +48,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -60,7 +61,7 @@
             // 
             this.EditBtn.BackColor = System.Drawing.Color.Teal;
             this.EditBtn.ForeColor = System.Drawing.Color.White;
-            this.EditBtn.Location = new System.Drawing.Point(142, 203);
+            this.EditBtn.Location = new System.Drawing.Point(147, 203);
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.Size = new System.Drawing.Size(92, 36);
             this.EditBtn.TabIndex = 43;
@@ -253,12 +254,24 @@
             this.pictureBox5.TabIndex = 61;
             this.pictureBox5.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Teal;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(93, 266);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 36);
+            this.button1.TabIndex = 63;
+            this.button1.Text = "Delete";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // department
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(921, 557);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label8);
@@ -315,5 +328,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -74,7 +74,7 @@ namespace EmployeeMange4
             }
             else
             {
-                key=Convert.ToInt32(DepList.SelectedRows[0].cells[1].value.ToString())
+                key=Convert.ToInt32(DepList.SelectedRows[0].cells[0].value.ToString())
             }
 
         }
