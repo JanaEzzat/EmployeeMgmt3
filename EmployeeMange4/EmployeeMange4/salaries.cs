@@ -41,5 +41,20 @@ namespace EmployeeMange4
 
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+               else
+            {
+                string Dep = DepNameTb.Text;
+                string Query = "Delete from DepartmentTb1 where Depid = {0}";
+                Query = string.Format(Query, key);
+                Con.SetData(Query);
+                ShowDepartments();
+                MessageBox.Show("Department Deleted!!!");
+                DepNameTb.Text = "";
+            }
+        }
+    }
     }
 }
