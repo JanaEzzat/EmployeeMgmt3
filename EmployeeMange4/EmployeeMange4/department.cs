@@ -42,6 +42,7 @@ namespace EmployeeMange4
                 else
                 {
                     string Dep = DepNameTb.Text;
+                    string Query = "insert into DepartmentTbl values({0})";
                 }
 
             }
