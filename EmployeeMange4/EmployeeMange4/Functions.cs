@@ -22,7 +22,7 @@ namespace EmployeeMange3
             Con = new SqlConnection(ConStr);
             Cmd = new SqlCommand();
             Cmd.Connection = Con;
-           }
+        }
 
         public DataTable GetData (string Query)
         {
