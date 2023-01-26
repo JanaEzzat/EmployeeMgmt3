@@ -41,7 +41,7 @@ namespace EmployeeMange4
         {
             try
             {
-                if (DepNameTb.Text == "")
+                if (EmpNameTb.Text == "" )
                 {
                     MessageBox.Show("missing data!!!");
                 }
