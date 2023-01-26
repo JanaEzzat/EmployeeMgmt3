@@ -21,9 +21,9 @@ namespace EmployeeMange4
         {
             InitializeComponent();
             Con = new Functions();
-            ListerDepartments();
+            ShowDepartments();
         }
-        private void ListerDepartments()
+        private void ShowDepartments()
         {
             string Query = "Select= form DepartmentTbl";
             DepList.DataSource = Con.GetData(Query);
