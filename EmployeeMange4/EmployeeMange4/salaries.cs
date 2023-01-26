@@ -34,7 +34,9 @@ namespace EmployeeMange4
 
         private void label13_Click(object sender, EventArgs e)
         {
-            Employees Obj =new Employees
+            Employees Obj = new Employees();
+            Obj.Show();
+
 
         }
     }
