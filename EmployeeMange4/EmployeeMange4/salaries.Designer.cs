@@ -352,7 +352,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(92, 33);
             this.button3.TabIndex = 79;
-            this.button3.Text = "Update";
+            this.button3.Text = "delete";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // salaries
