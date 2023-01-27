@@ -62,3 +62,5 @@ namespace EmployeeMgmt1
                     throw;
                 }
             }
+            private void SalaryList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+            {
