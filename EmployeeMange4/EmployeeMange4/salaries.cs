@@ -50,3 +50,6 @@ namespace EmployeeMgmt1
                 d = Convert.ToInt32(DaysTb.Text);
                 AmountTb.Text = "Rs" + (d * DSal);
             }
+            private void ShowSalary()
+            {
+                try
