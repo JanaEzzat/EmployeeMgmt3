@@ -73,3 +73,5 @@ private void EditBtn_Click(object sender, EventArgs e)
         }
         else
         {
+            string Dep = DepNameTb.Text;
+            string Query = "Update DepartmentTb1 set Depname = '{0}' where Depid = {1}";
