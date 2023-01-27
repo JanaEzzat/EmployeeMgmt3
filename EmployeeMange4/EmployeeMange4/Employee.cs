@@ -38,3 +38,8 @@ MessageBox.Show("Emoloyee Updated!!!");
 EmpNameTb.Text = "";
 DailySalTb.Text = "";
 GenCb.SelectedIndex = -1;
+DepCb.SelectedIndex = -1;
+                }
+            }
+            catch (Exception Ex)
+{
