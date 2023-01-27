@@ -25,4 +25,7 @@ namespace EmployeeMgmt1
         private void GetEmployees()
         {
             string Query = "Select * from EmployeeTb1";
-            EmpCb.DisplayMember = 
+            EmpCb.DisplayMember =
+                Con.GetData(Query).Columns["EmpName"].ToString();
+            EmpCb.ValueMember = Con.GetData(Query).Columns["Empid"].ToString();
+            EmpCb.DataSource = Con.GetData(Q
