@@ -44,3 +44,9 @@ namespace EmployeeMgmt1
             if (DaysTb.Text == "Rs")
             {
                 AmountTb.Text = "" + (d * DSal);
+            }
+            else
+            {
+                d = Convert.ToInt32(DaysTb.Text);
+                AmountTb.Text = "Rs" + (d * DSal);
+            }
