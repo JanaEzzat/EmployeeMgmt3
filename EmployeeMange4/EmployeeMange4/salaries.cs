@@ -98,3 +98,7 @@ namespace EmployeeMgmt1
             }
 
 }
+private void EmpCb_SelectionChangeCommitted(object sender, EventArgs e)
+{
+    GetSalary();
+}
