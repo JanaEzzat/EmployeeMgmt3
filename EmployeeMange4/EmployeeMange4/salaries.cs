@@ -22,3 +22,5 @@ namespace EmployeeMgmt1
             ShowSalary();
             GetEmployees();
         }
+        private void GetEmployees()
+        {
