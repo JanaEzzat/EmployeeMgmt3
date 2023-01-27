@@ -74,3 +74,9 @@ namespace EmployeeMgmt1
                     {
                 MessageBox.Show("Missing Data!!!");
             }
+              else
+            {
+                Period = PeriodTb.Value.Date.Month.ToString() + "-" + PeriodTb.Value.Date.Year.ToString();
+                int Amount = DSal * Convert.ToInt32(DaysTb.Text);
+                int Days = Convert.ToInt32(DaysTb.Text);
+                string Query = "Update SalaryTb1 values({0},{1},'{2}',{3},'{4}',)";
