@@ -1,4 +1,5 @@
 ﻿using EmployeeMange4;
+using EmployeeMgmt1;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -116,5 +117,11 @@ private void EmpLbl_Click(object sender, EventArgs e)
 {
     Employees obj = new Employees();
     obj.Show();
+    this.Hide();
+}
+private void label10_Click(object sender, EventArgs e)
+{
+    Salary Obj = new Salary();
+    Obj.Show();
     this.Hide();
 }
