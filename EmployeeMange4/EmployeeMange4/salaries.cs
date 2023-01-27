@@ -17,3 +17,8 @@ namespace EmployeeMgmt1
         Functions Con;
         public Salary()
         {
+            InitializeComponent();
+            Con = new Functions();
+            ShowSalary();
+            GetEmployees();
+        }
