@@ -14,3 +14,6 @@ namespace EmployeeMgmt1
 {
     public partial class Salary : Form
     {
+        Functions Con;
+        public Salary()
+        {
