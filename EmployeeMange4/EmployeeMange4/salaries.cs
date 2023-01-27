@@ -32,3 +32,5 @@ namespace EmployeeMgmt1
                      }
         int DSal = 0;
         string Period = "";
+        private void GetSalary()
+        {
