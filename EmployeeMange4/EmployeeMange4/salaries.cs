@@ -92,3 +92,5 @@ namespace EmployeeMgmt1
                 DaysTb.Text = "";
             }
         }
+             catch (Exception Ex)
+            {
