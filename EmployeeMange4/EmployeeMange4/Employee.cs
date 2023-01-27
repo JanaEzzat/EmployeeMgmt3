@@ -31,5 +31,10 @@ int Dep =
 string DOB = DOBTb.Value.Date.ToString();
 string JDate = JDateTb.Value.Date.ToString();
 int Salary = Convert.ToInt32(DailySalTb.Text);
-string Query = "Update EmployeeTb1 set EmpName = 
-  
+string Query = "Update EmployeeTb1 set EmpName = {0}',EmpGen='{1}',EmpDep={2},EmpDOB='{3}',Empjdate='{4}',EmpSal={5} where Empid= {6}\";\r\n                    Query = string.Format(Query, Name, Gender, Dep, DOB, JDate, Salary,key);
+ Con.SetData(Query);
+ShowEmp();
+MessageBox.Show("Emoloyee Updated!!!");
+EmpNameTb.Text = "";
+DailySalTb.Text = "";
+GenCb.SelectedIndex = -1;
