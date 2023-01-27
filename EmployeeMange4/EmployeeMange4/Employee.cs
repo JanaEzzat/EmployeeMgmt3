@@ -54,3 +54,7 @@ private void EmployeeList_CellContentClick(object sender, DataGridViewCellEventA
     DOBTb.Text = EmployeeList.SelectedRows[0].Cells[4].Value.ToString();
     JDateTb.Text = EmployeeList.SelectedRows[0].Cells[5].Value.ToString();
     DailySalTb.Text = EmployeeList.SelectedRows[0].Cells[6].Value.ToStrin
+          if (EmpNameTb.Text == "")
+    {
+        key = 0;
+    }
