@@ -56,3 +56,10 @@ private void DepList_CellContentClick(object sender, DataGridViewCellEventArgs e
 if (DepNameTb.Text == "")
 {
     {
+        key = 0;
+    }
+            else
+    {
+        key = Convert.ToInt32(DepList.SelectedRows[0].Cells[0].Value.ToString());
+    }
+}
