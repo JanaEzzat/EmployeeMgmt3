@@ -29,3 +29,5 @@ namespace EmployeeMgmt1
                 Con.GetData(Query).Columns["EmpName"].ToString();
             EmpCb.ValueMember = Con.GetData(Query).Columns["Empid"].ToString();
             EmpCb.DataSource = Con.GetData(Q
+                     }
+        int DSal = 0;
