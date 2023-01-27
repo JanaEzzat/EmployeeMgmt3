@@ -48,4 +48,3 @@ DepCb.SelectedIndex = -1;
    int key = 0;
 private void EmployeeList_CellContentClick(object sender, DataGridViewCellEventArgs e)
 {
-    {
