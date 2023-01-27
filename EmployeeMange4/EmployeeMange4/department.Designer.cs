@@ -104,3 +104,7 @@ MessageBox.Show(Ex.Message);
         ShowDepartments();
         MessageBox.Show("Department Deleted!!!");
         DepNameTb.Text = "";
+    }
+    }
+    catch (Exception Ex)
+    {
