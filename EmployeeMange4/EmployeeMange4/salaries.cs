@@ -102,3 +102,11 @@ private void EmpCb_SelectionChangeCommitted(object sender, EventArgs e)
 {
     GetSalary();
 }
+private void LogoutLbl_Click(object sender, EventArgs e)
+{
+    login Obj = new login();
+    Obj.Show();
+    this.Hide();
+}
+    }
+}
