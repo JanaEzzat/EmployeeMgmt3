@@ -66,3 +66,5 @@ namespace EmployeeMgmt1
             {
             }
             int d = 1;
+            private void AddBtn_Click(object sender, EventArgs e)
+            {
