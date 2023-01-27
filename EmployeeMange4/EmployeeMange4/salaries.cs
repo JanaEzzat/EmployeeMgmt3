@@ -1,120 +1,112 @@
-﻿using System;
+﻿using EmployeeMange4;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EmployeeMange4
+namespace EmployeeMgmt1
 {
-    public partial class salaries : Form
+    public partial class Salary : Form
     {
-        public salaries()
+        Functions Con;
+        public Salary()
         {
             InitializeComponent();
+            Con = new Functions();
+            ShowSalary();
+            GetEmployees();
         }
+        private void GetEmployees()
+        {
+            string Query = "Select * from EmployeeTb1";
+            EmpCb.DisplayMember = Con.GetData(Query).Columns["EmpName"].ToString();
+            EmpCb.ValueMember = Con.GetData(Query).Columns["Empid"].ToString();
+            EmpCb.DataSource = Con.GetData(Query);
 
-        private void salaries_Load(object sender, EventArgs e)
+        }
+        int DSal = 0;
+        string Period = "";
+        private void GetSalary()
+        {
+            string Query = "Select EmpSal from EmployeeTb1 where Empid = {0}";
+            Query = string.Format(Query, EmpCb.SelectedValue.ToString());
+            foreach (DataRow dr in Con.GetData(Query).Rows)
+            {
+                DSal = Convert.ToInt32(dr["EmpSal"].ToString());
+            }
+            //MessageBox.Show(DSal+ "");
+
+            if (DaysTb.Text == "Rs")
+            {
+                AmountTb.Text = "" + (d * DSal);
+            }
+            else
+            {
+                d = Convert.ToInt32(DaysTb.Text);
+                AmountTb.Text = "Rs" + (d * DSal);
+            }
+        }
+        private void ShowSalary()
+        {
+            try
+            {
+                string Query = "Select * from SalaryTb1";
+                SalaryList.DataSource = Con.GetData(Query);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        private void SalaryList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        int d = 1;
+        private void AddBtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (EmpCb.SelectedIndex == -1  DaysTb.Text == ""  PeriodTb.Text == "")
+                {
+                    MessageBox.Show("Missing Data!!!");
+                }
+                else
+                {
+                    Period = PeriodTb.Value.Date.Month.ToString() + "-" + PeriodTb.Value.Date.Year.ToString();
+                    int Amount = DSal * Convert.ToInt32(DaysTb.Text);
+                    int Days = Convert.ToInt32(DaysTb.Text);
+                    string Query = "Update SalaryTb1 values({0},{1},'{2}',{3},'{4}',)";
+                    Query = string.Format(Query, EmpCb.SelectedValue.ToString(), Days, Period, Amount, DateTime.Today.Date);
+                    Con.SetData(Query);
+                    ShowSalary();
+                    MessageBox.Show("Salary  Paid!!!");
+                    DaysTb.Text = "";
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void EmpCb_SelectionChangeCommitted(object sender, EventArgs e)
         {
-
+            GetSalary();
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void LogoutLbl_Click(object sender, EventArgs e)
         {
-            Employees Obj = new Employees();
+            login Obj = new login();
             Obj.Show();
             this.Hide();
-
-
-
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-               else
-            {
-                string Dep = DepNameTb.Text;
-                string Query = "Delete from DepartmentTb1 where Depid = {0}";
-                Query = string.Format(Query, key);
-                Con.SetData(Query);
-                ShowDepartments();
-                MessageBox.Show("Department Deleted!!!");
-                DepNameTb.Text = "";
-                Functions Con;
-                public Departments()
-                    InitializeComponent();
-                Con = new Functions();
-                ShowDepartments();
-                string Query = "Select * from DepartmentTb1";
-                DepList.DataSource = Con.GetData(Query);
-                private void AddBtn_Click(object sender, EventArgs e)
-                {
-                    try
-                    {
-                        if (DepNameTb.Text == "")
-                        {
-                            MessageBox.Show("missing data!!!");
-                        }
-                        else
-                        {
-                            string Dep = DepNameTb.Text;
-                            string Query = "insert into DepartmentTb1 values('{0}')";
-                            Query = string.Format(Query, DepNameTb.Text);
-                            Con.SetData(Query);
-                            ShowDepartments();
-                            MessageBox.Show("Department Added!!!");
-                            DepNameTb.Text = "";
-                        }
-                    }
-                    catch (Exception Ex)
-                    MessageBox.Show(Ex.Message);
-                    }
-                }
-                int key = 0;
-                private void DepList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-                {
-                    DepNameTb.Text = DepList.SelectedRows[0].Cells[0].Value.ToString();
-                    if (DepNameTb.Text == "")
-                    {
-                        key = 0;
-                        {
-                    }
-                                   catch (Exception Ex)
-                        {
-                            MessageBox.Show(Ex.Message);
-                        }
-                    }
-
-                    private void DeleteBtn_Click(object sender, EventArgs e)
-                    {
-                        try
-                        {
-                        }
-                               string Dep = DepNameTb.Text;
-                        string Query = "Delete from DepartmentTb1 where Depid = {0}";
-                        Query = string.Format(Query, key);
-                        Con.SetData(Query);
-                        ShowDepartments();
-                        MessageBox.Show("Department Deleted!!!");
-                        DepNameTb.Text = "";
-                    }
-                }
-                {
-                }
-        }
-    }
     }
 }
