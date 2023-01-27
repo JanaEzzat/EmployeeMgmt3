@@ -64,3 +64,5 @@ namespace EmployeeMgmt1
             }
             private void SalaryList_CellContentClick(object sender, DataGridViewCellEventArgs e)
             {
+            }
+            int d = 1;
