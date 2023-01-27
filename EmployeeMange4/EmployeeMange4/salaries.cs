@@ -36,3 +36,8 @@ namespace EmployeeMgmt1
         {
             string Query = "Select EmpSal from EmployeeTb1 where Empid = {0}";
             Query = string.Format(Query, EmpCb.SelectedValue.ToString());
+            foreach (DataRow dr in Con.GetData(Query).Rows)
+            {
+                DSal = Convert.ToInt32(dr["EmpSal"].ToString());
+            }
+            //MessageBox.Show(DSal+ "");
