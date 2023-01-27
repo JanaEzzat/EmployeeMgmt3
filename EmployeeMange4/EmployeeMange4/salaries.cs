@@ -24,3 +24,5 @@ namespace EmployeeMgmt1
         }
         private void GetEmployees()
         {
+            string Query = "Select * from EmployeeTb1";
+            EmpCb.DisplayMember = 
