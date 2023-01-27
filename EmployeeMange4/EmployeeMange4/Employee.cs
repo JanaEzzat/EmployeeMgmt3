@@ -19,3 +19,9 @@ DepCb.SelectedIndex = -1;
     try
     {
         if (EmpNameTb.Text == ""  Ge
+                DepCb.SelectedIndex == -1 || DailySalTb.Text == "")
+                {
+    MessageBox.Show("missing data!!!");
+}
+                else
+{
