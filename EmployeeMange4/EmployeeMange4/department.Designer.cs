@@ -108,3 +108,13 @@ MessageBox.Show(Ex.Message);
     }
     catch (Exception Ex)
     {
+        MessageBox.Show(Ex.Message);
+    }
+}
+
+private void EmpLbl_Click(object sender, EventArgs e)
+{
+    Employees obj = new Employees();
+    obj.Show();
+    this.Hide();
+}
