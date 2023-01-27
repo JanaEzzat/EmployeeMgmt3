@@ -82,3 +82,7 @@ private void EditBtn_Click(object sender, EventArgs e)
             DepNameTb.Text = "";
         }
     }
+        MessageBox.Show("Department Updated!!!");
+    DepNameTb.Text = "";
+}
+            }
