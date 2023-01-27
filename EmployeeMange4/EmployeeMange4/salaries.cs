@@ -88,3 +88,7 @@ namespace EmployeeMgmt1
                     Query = string.Format(Query, EmpCb.SelectedValue.ToString(), Days, Period, Amount, DateTime.Today.Date);
                 Con.SetData(Query);
                 ShowSalary();
+                MessageBox.Show("Salary  Paid!!!");
+                DaysTb.Text = "";
+            }
+        }
