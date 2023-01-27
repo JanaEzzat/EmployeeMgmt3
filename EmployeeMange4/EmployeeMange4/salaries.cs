@@ -31,3 +31,4 @@ namespace EmployeeMgmt1
             EmpCb.DataSource = Con.GetData(Q
                      }
         int DSal = 0;
+        string Period = "";
