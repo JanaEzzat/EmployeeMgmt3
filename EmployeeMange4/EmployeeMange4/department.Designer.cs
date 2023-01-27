@@ -78,3 +78,7 @@ private void EditBtn_Click(object sender, EventArgs e)
             Query = string.Format(Query, DepNameTb.Text, key);
             Con.SetData(Query);
             ShowDepartments();
+            MessageBox.Show("Department Updated!!!");
+            DepNameTb.Text = "";
+        }
+    }
